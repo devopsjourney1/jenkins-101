@@ -1,19 +1,22 @@
 pipeline {
-    agent { dockerfile true }
+    agent python-agent
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
+                cd myapp
+                pip install requirements.txt
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                curl http://localhost:5000
             }
         }
-        stage('Deploy') {
+        stage('Deliver') {
             steps {
-                echo 'Deploying....'
+                echo 'Deliver....'
             }
         }
     }
