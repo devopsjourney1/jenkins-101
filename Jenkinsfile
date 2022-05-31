@@ -8,8 +8,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh '''
                 cd myapp
                 pip install requirements.txt
+                '''
             }
         }
         stage('Test') {
