@@ -18,7 +18,8 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh '''
-                curl http://localhost:5000
+                python hello.py
+                python hello.py --name=Brad
                 '''
             }
         }
