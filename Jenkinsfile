@@ -1,5 +1,9 @@
 pipeline {
-    agent { python-agent }
+    agent { 
+        node {
+            label: 'python-agent'
+            }
+      }
     stages {
         stage('Build') {
             steps {
