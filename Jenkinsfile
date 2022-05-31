@@ -11,7 +11,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh '''
                 curl http://localhost:5000
+                '''
             }
         }
         stage('Deliver') {
