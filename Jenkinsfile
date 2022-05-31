@@ -1,5 +1,5 @@
 pipeline {
-    agent python-agent
+    agent { python-agent }
     stages {
         stage('Build') {
             steps {
