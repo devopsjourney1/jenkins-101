@@ -1,3 +1,8 @@
+
+## YouTube Link
+For the full 1 hour course watch out youtube:
+https://youtu.be/BMGYewF6yAM
+
 # Installation
 ## Build the Jenkins BlueOcean Docker Image
 ```
