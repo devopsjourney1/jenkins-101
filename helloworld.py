@@ -1,2 +1,2 @@
 
-print("Hello world from Jenkins world12")
+print("Hello world from Jenkins world")
