@@ -1,9 +1,5 @@
 pipeline {
-    agent { 
-        node {
-            label 'docker-agent-python'
-            }
-      }
+    agent any
     
     // triggers {
     //     pollSCM '*/5 * * * *'
@@ -20,7 +16,7 @@ pipeline {
         }
         stage('SonarQube'){
             environment {
-                scannerHome = tool 'SonarQubeScanner'
+                scannerHome = tool 'SonarQube-Scanner'
             }
             steps {
                 withSonarQubeEnv(installationName:'SonarQube'){
