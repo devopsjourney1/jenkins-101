@@ -18,7 +18,8 @@ def test2(name):
 
 def test3(name):
   print(f'hello {name}')
-  return (1,2) + ['a']
+  z = (1,2) + ['a']
+  return z
 
 if __name__ == '__main__':
   fire.Fire(hello)
