@@ -14,6 +14,8 @@ def test(name):
   # retrun True
   
 def test2(name):
+  print('Error code %d' % '42') 
+  print("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj")
   print(f'hello {name}')
 
 def test3(name):
