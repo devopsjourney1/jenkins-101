@@ -7,7 +7,7 @@ def hello(name="World"):
 def test(name):
   if name:
     msg = "Test: {1}."
-    return True
+    return
   else:
     return False
   
@@ -18,6 +18,7 @@ def test2(name):
 
 def test3(name):
   print(f'hello {name}')
+  return (1,2) + ['a']
 
 if __name__ == '__main__':
   fire.Fire(hello)
