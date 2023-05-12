@@ -6,6 +6,7 @@ def hello(name="World"):
 
 def test(name):
   if name:
+    msg = "Test: {1}."
     return True
   else:
     return False
