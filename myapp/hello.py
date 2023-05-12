@@ -24,6 +24,10 @@ def test2(name):
 def test3(name):
   print(f'hello {name}')
   z = (1,2) + ['a']
+  x = 1
+  while (x < 10):
+    print("x is now %d" % (x))
+    x += 1
   return z
 
 if __name__ == '__main__':
