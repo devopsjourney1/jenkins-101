@@ -21,10 +21,10 @@ pipeline {
         stage('SonarQube'){
             steps {
                 withSonarQubeEnv(installationName:SonarQube')
-                sh '''
-                cd myapp
-                sh "${scannerHome}/bin/sonar-scanner"
-                '''
+                    sh '''
+                    cd myapp
+                    sh "${scannerHome}/bin/sonar-scanner"
+                    '''
             }
         }
         stage('Test') {
