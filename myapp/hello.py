@@ -5,6 +5,9 @@ def hello(name="World"):
 
 
 def test(name):
+  username = 'admin'
+  password = 'admin' # Sensitive
+  usernamePassword = 'user=admin&password=admin' # Sensitive
   if name:
     msg = "Test: {1}."
     return
