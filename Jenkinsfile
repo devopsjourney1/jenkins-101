@@ -20,6 +20,7 @@ pipeline {
         }
         stage('SonarQube'){
             steps {
+                def scannerHome = tool 'SonarQube Scanner 2.15';
                 withSonarQubeEnv(installationName:'SonarQube')
                     sh '''
                     cd myapp
