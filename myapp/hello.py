@@ -10,7 +10,7 @@ def test(name):
   else:
     return False
   
-  retrun True
+  # retrun True
   
 def test2(name):
   print(f'hello {name}')
