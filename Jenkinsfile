@@ -25,7 +25,8 @@ pipeline {
                     sh '''
                     cd myapp
                     sh "${scannerHome}/bin/sonar-scanner"
-                }    '''
+                    '''
+                }
             }
         }
         stage('Test') {
