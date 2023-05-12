@@ -20,13 +20,10 @@ pipeline {
         }
         stage('SonarQube'){
             steps {
-                script {
-                    scannerHome = tool 'SonarQube';
-                }
                 withSonarQubeEnv(installationName:'SonarQube'){
                     sh '''
                     cd myapp
-                    sh "${scannerHome}/bin/sonar-scanner"
+                    sh "sonar-scanner"
                     '''
                 }
             }
