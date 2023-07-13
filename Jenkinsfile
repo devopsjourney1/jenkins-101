@@ -1,6 +1,9 @@
 pipeline {
-    agent any
-    
+    agent { 
+        node {
+            label 'docker-agent-python'
+            }
+      }
     triggers {
         pollSCM '* * * * *'
     }
@@ -36,7 +39,7 @@ pipeline {
         stage('Deploying App to Kubernetes') {
             steps {
                 script {
-                    kubernetesDeploy(configs: "deploymentservice.yml", kubeconfigId: "kubernetes")
+                ZkubernetesDeploy(configs: "deploymentservice.yml", kubeconfigId: "kubernetes")
         }
       }
     }
