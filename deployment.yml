@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins101-deployment
+  labels:
+    app: nodeapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins101
+  template:
+    metadata:
+      labels:
+        app: jenkins101 
+    spec:
+      containers:
+      - name: jenkins101server
+        image: sathiyan97/jenkins101:latest
+        ports:
+        - containerPort: 3000
+        
+        
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins101-service
+spec:
+  selector:
+    app: jenkins101 
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 3000
+    nodePort: 31110
