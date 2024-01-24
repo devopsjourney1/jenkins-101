@@ -8,11 +8,6 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
-        stage('Pull') {
-            steps {
-                git branch: '${branch}, url: 'https://github.com/ningzaichun/hello-springboot'
-            }
-        }
         stage('Build') {
             steps {
                 echo "Building.."
