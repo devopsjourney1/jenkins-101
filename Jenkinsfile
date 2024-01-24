@@ -8,6 +8,11 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
+        stage('Pull') {
+            steps {
+                git branch: '${branch}, url: 'https://github.com/ningzaichun/hello-springboot'
+            }
+        }
         stage('Build') {
             steps {
                 echo "Building.."
@@ -15,6 +20,7 @@ pipeline {
                 cd myapp
                 python3 -m venv ~/.venv
                 source ~/.venv/bin/activate
+                pip3 install --upgrade pip3
                 pip3 install -r requirements.txt
                 '''
             }
@@ -24,6 +30,7 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 cd myapp
+                source ~/.venv/bin/activate
                 python3 hello.py
                 python3 hello.py --name=Brad
                 '''
