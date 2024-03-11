@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'docker-agent-alpine'
+            label 'docker-agent-python'
             }
       }
     triggers {
@@ -12,7 +12,8 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                echo "doing build stuff.."
+                cd myapp
+                pip install -r requirements.txt
                 '''
             }
         }
