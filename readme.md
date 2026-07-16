@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=6YZvp2GwT0A
 # Installation
 ## Build the Jenkins BlueOcean Docker Image (or pull and use the one I built)
 ```
-docker build -t myjenkins-blueocean:2.414.2 .
+docker build -t myjenkins-blueocean:2.504.1 .
 
 #IF you are having problems building the image yourself, you can pull from my registry (It is version 2.332.3-1 though, the original from the video)
 
@@ -27,7 +27,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   --publish 8080:8080 --publish 50000:50000 \
   --volume jenkins-data:/var/jenkins_home \
   --volume jenkins-docker-certs:/certs/client:ro \
-  myjenkins-blueocean:2.414.2
+  myjenkins-blueocean:2.504.1
 ```
 
 ### Windows
@@ -37,7 +37,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach `
   --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 `
   --volume jenkins-data:/var/jenkins_home `
   --volume jenkins-docker-certs:/certs/client:ro `
-  --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:2.414.2
+  --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:2.504.1
 ```
 
 
